@@ -1,0 +1,19 @@
+--- # regex config,add more accordingly
+regex:
+  -dates:
+    - ^((31(?!\ (Apr(il)?|June?|(Sept|Nov)(ember)?)))|((30|29)(?!\ Feb(ruary)?))|(29(?=\ Feb(ruary)?\ (((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))|(0?[1-9])|1\d|2[0-8])\ (Jan(uary)?|Feb(ruary)?|Ma(r(ch)?|y)|Apr(il)?|Ju((ly?)|(ne?))|Aug(ust)?|Oct(ober)?|(Sept|Nov|Dec)(ember)?)\ ((1[6-9]|[2-9]\d)\d{2})$
+  -postal:
+    - ^(([A-Z]{1,2}[0-9]{1,2})|([A-Z]{1,2}[0-9][A-Z])|([A-Z]{1,2}[A-Z][A-Z]))\s?([0-9][A-Z]{2})$
+    - ^[1-9]{1}[0-9]{3}\s?[A-Z]{2}$
+  -email:
+    - (\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})
+  -phone:
+    - (\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4}|\(\d{3}\)\s*\d{3}[-\.\s]??\d{4}|\d{4}[-\.\s]??\d{4}[-\.\s]??\d{3})
+    - ^((\+){0,1}91(\s){0,1}(\-){0,1}(\s){0,1}){0,1}98(\s){0,1}(\-){0,1}(\s){0,1}[1-9]{1}[0-9]{7}$
+    - (\+91\s[0-9]{2}\s[0-9]{4}\s[0-9]{4})|(\+91\s[0-9]{5}\s[0-9]{5})|(\+44\s[0-9]{2}\s[0-9]{4}\s[0-9]{4})
+
+# crawler config,add more accordingly
+crawler: location|about|contact|help|touch
+
+# domains config,add more accordingly
+domains: www|com|co|uk|net|org|/
